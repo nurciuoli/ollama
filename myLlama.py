@@ -31,8 +31,7 @@ def encode_image(image_path):
   with open(image_path, "rb") as image_file:
     return base64.b64encode(image_file.read()).decode('utf-8')
 
-
-
+# agent class framework
 class Agent:
     def __init__(self,system_prompt = 'You are a helpful chat based assistant'):
         self.system_prompt = system_prompt
@@ -42,6 +41,7 @@ class Agent:
         'content': system_prompt,
     },
     ]
+    #chat with agent and continue conversation
     def chat(self,user_msg,stream=True):
         self.messages.append(
         {
