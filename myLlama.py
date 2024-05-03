@@ -16,9 +16,13 @@ def chat(user_msg,stream=True):
     print()
 
 #generate func
-def generate(prompt,stream=True):
-    for part in o.generate('llama3', prompt, stream=stream):
-        print(part['response'], end='', flush=True)
+def generate(prompt,stream=True,format=None):
+    if format is None:
+        for part in o.generate('llama3', prompt, stream=stream):
+            print(part['response'], end='', flush=True)
+    else:
+        response=o.generate('llama3', prompt, stream=stream,format=format)
+        print(response['response'])
 
 #generate with image func
 def generate_w_images(prompt,images,stream=True):

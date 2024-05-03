@@ -1,13 +1,12 @@
-image_file.png
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+/test
 # C extensions
 *.so
-
+image_file.png
+image_file.png
 # Distribution / packaging
 .Python
 build/
